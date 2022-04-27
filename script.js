@@ -70,33 +70,49 @@
 //     }
 // }
 
-// ----------------------------------------------------
 
-// // 7. ??????????????????
+// let array= [[2,-3,5,10],[25,-24,-11,100],[-6,-7,10]]
 
-//  let array= [32,10,'hello', null,'hello2', 50];
-
-//  for (item of array){
-//      for(typeof item == number){
-//          if(item % 5 == 0){
-//              console.log(item);
-//          }
-//      }
-//  }
+// for(let item of array){
+//     for(let x of item){
+//         if (x>0){
+//             console.log(x);
+//         }
+//     }
     
-// for (let item of array){
-//     if(typeof item == 'number'){
-//        for (let x of item){
-//            if(x%5 == 0){
-//                console.log(x);
-//            }
-//        }
+// }
+
+// let array= [[2,-3,5,10],[25,-24,-11,100],[-6,-7,10]]
+
+// for (let i = 0; i < array.length; i++) {
+//     const numbers = array[i];
+//     for (let x = 0; x < numbers.length; x++) {
+//         const positive = numbers[x];
+        
+//         if(positive>0){
+//             console.log(positive);
+//         }       
+//     }   
+// }
+
+
+
+
+// // 7. 
+
+// let array= [32,10,'hello', null,'hello2', 50];
+
+// for(let i=0; i < array.length; i++){
+//     if (typeof array[i] == 'number' && array[i] % 5 == 0){
+//         console.log(array[i]);
 //     }
 // }
-    
 
-// ------------------------------------------------------
-
+// for(let item of array){
+//     if (typeof item == 'number' && item % 5 == 0){
+//         console.log(item);
+//     }
+// }
 
 
 
@@ -104,7 +120,7 @@
 
 // functions
 
-// 1. ????????????????????????????????????????
+// 1.
 
 // sum(2, -9, 5, 11, -30, 100, -8, -11, -4, 5, -6, 8);
 
@@ -114,9 +130,37 @@
 //         if(item>0){
 //             numbersum=numbersum+item; 
 //         }
-//         console.log(numbersum);
+        
 //     }
+//     console.log(numbersum);
 // }
+
+
+// sum(2, -9, 5, 11, -30, 100, -8, -11, -4, 5, -6, 8);
+
+// function sum (...numbers){
+//     let newsum = 0;
+//     for(let x of numbers){
+//         if(x>0){
+//             newsum=newsum+x;
+//         }
+//     }
+//             console.log(newsum);
+// }
+
+
+
+// function sum (...numbers){
+//     let newsum = 0;
+//     for(let x of numbers){
+//         if(x>0){
+//             newsum=newsum+x;
+//         }
+//     }
+//     return newsum;
+// }
+// let result=sum(2, -9, 5, 11, -30, 100, -8, -11, -4, 5, -6, 8);
+// console.log(result);
 
 
 // 2.
@@ -150,6 +194,32 @@
 // }
 // condition()
 
+// let user = {
+//     firstname: 'giorgi',
+//     lastname:'saakadze',
+//     age:32,
+//     isloggedin:true
+// }
+
+// function printname(obj){
+//     if (obj.isloggedin){
+//         return obj.firstname+' '+ obj.lastname;
+//     }
+//     return false;
+// }
+// let result=printname(user);
+// console.log(result);
+
+
+// function printname(user){
+//     if (user.isloggedin){
+//         return user.firstname+' '+ user.lastname;
+//     }
+//     return false;
+// }
+// let result=printname(user);
+// console.log(result);
+
 
 // 4.
 
@@ -166,11 +236,27 @@
 // maxMath(randomnumbers)
 
 
-// // 
+// 
 // let numbers = [1,5,9,3,5,7];
 
 // let max = Math.max(...numbers);
 
 // console.log(...numbers);
 // console.log(`${max}`);
-// // 
+// 
+
+
+
+
+
+// function getmax(arraynumbers){
+//     let maxvalue=0;
+//     for(let item of arraynumbers){
+//         if(item>maxvalue){
+//             maxvalue=item;
+//         }
+//     }
+//     return maxvalue;
+// }
+
+// console.log(getmax([5,102,120,250,30]));
